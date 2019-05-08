@@ -1,34 +1,44 @@
+//1. Dwarf Roll Call - accept array of dwarf names, then return a string with a numbered dwarves. 
 function dwarfRollCall(dwarves) {
-   var array=[]
-  dwarves.forEach(function(dwarf,i) {
-  array.push(i+1 + ". " + dwarves[i] + " ")
-  })
+  var array = [];
+  
+  for(let i = 0; i < dwarves.length; i++) {
+    array.push(`${i+1}. ${dwarves[i]} `)
+  }
   return array.join("")
 }
 
-
-function summonCaptainPlanet(planeteerCalls){
- return planeteerCalls.map(ele => ele.toUpperCase() + "!")
+//2. Summon Captain Planet - accept array of planeteer calls, then convert element to uppercase and add exclamation point at the end. Return array.
+function summonCaptainPlanet(planeteerCalls) {
+   var array = [];
+   
+  for(let i = 0; i< planeteerCalls.length; i++) {
+    array.push(`${planeteerCalls[i].toUpperCase()}!`)
+  }
+  return array 
 }
 
+
+//3. Long Planeteer Calls - function tells if any of the calls are longer than four characters. Return value - false or true.  
 
 function longPlaneteerCalls(words) {
-	for(var i = 0; i < words.length; i++) {
-		if(words[i].length > 4) {
-			return true;
-		}
-	}
-	return false;
-}
-
-
-function findTheCheese (foods) {
-   for(var i = 0; i < foods.length; i++){
-  if (foods[i] == "cheddar" && "gouda" && "camembert"
-   ){
-    return foods[i]
+  for (let i = 0; i < words.length; i++) {
+    if (words.length > 4) {
+      return true
+    }
+    return false
   }
 }
-return "no cheese!"
+
+//4. Find The Cheese - return first string that is type of cheese. Cheese = ["cheddar", "gouda", "camembert"]
+
+function findTheCheese(foods) {
+  for (let i = 0; i < foods.length; i++) {
+    if (foods[i] === "cheddar" || foods[i] === "gouda" || foods[i] === "camembert") {
+      return foods[i]
+    }
+  }
+    return "no cheese!"
 }
+
 
