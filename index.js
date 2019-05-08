@@ -5,7 +5,7 @@ function dwarfRollCall(dwarves) {
   for(let i = 0; i < dwarves.length; i++) {
     array.push(`${i+1}. ${dwarves[i]} `)
   }
-  return array.join("")
+  return array.join('')
 }
 
 //2. Summon Captain Planet - accept array of planeteer calls, then convert element to uppercase and add exclamation point at the end. Return array.
